@@ -1,6 +1,10 @@
 const fetchHandler = async () => {
-	const fetchedData = await fetch('https://dog.ceo/api/breeds/image/random');
-	return await fetchedData.json();
+	try {
+		const fetchedData = await fetch('https://dog.ceo/api/breds/image/random');
+		return await fetchedData.json();
+	} catch (err) {
+		console.log(err);
+	}
 };
 
 const dogRenderer = async () => {
